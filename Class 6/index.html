@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            .item {
+                border: 1px solid #ccc;
+            }
+            .container {
+                border: 1px solid red;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .item1 {
+                justify-self: center;
+                align-self: center;
+            }
+            .item2 {
+                justify-self: start;
+            }
+            .item3 {
+                justify-self: end;
+            }
+            .item4 {
+                align-self: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+        </div>
+    </body>
+</html>

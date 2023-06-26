@@ -1,0 +1,30 @@
+HTML > Hyper Text Markup Language
+
+
+
+Element/Tag: <head>, <body>, <img >, <p>
+
+Attribute: <head lang=""/> <body style=""/> <img src=""/>
+
+
+<head> ....  </head>
+<body> ...  </body>
+<p> ... </p>
+
+<img />
+<br />
+<hr />
+
+
+Assignment Questions - 
+
+1) Create a simple Nav bar and Header section with just using plain HTML make the all the options redirectable , upload a profile Image of a person for whom the portfolio is being created and add necessary details about the Person
+
+
+2) Create an About me Section with using (section tag , Necessary Heading , Images , divs and social Profile links)
+
+
+3) Create a Projects section where projects will be showcased with necessary headings, divs and Images with project logos and project description.
+
+
+

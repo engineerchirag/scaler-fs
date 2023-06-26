@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+                background-color: #ccc;
+                gap: 10px;
+                flex-wrap: nowrap;
+            }
+            .box {
+                height: 100px;
+            }
+            .box1 {
+                background-color: aqua;
+                width: 100px;
+            }
+            .box2 {
+                background-color: red;
+                flex-grow: 1;
+            }
+            .box3 {
+                background-color: green;
+            }
+            .box4 {
+                background-color: blue;
+            }
+            .box5 {
+                background-color: brown;
+            }
+            .box6 {
+                background-color: yellow;
+            }
+
+            @media (max-width: 500px) {
+               .box1 {
+                    flex-grow: 1;
+                    background-color: green;
+               }   
+           }
+
+           @media print {
+                .box1 {
+                    display: none;
+                }
+           }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1 box">Box 1</div>
+            <div class="box2 box">Box 2</div>
+            <!-- <div class="box3 box">Box 3</div>
+            <div class="box4 box">Box 4</div>
+            <div class="box5 box">Box 5</div>
+            <div class="box6 box">Box 6</div> -->
+        </div>
+    </body>
+</html>
