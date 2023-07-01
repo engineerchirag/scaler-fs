@@ -17,9 +17,9 @@ headingSection.appendChild(h3Element);
 
 
 // Show alert with "hi" message on click on window
-// document.addEventListener('click', function(event){
-//     alert('hi')
-// });
+document.addEventListener('click', function(event){
+    alert('hi')
+});
 
 // Change theme
 

@@ -1,0 +1,34 @@
+<html>
+  <head></head>
+  <body>
+    
+      <div>
+        <div>
+          <input
+            class="username"
+            type="text"
+            name="username"
+            placeholder="enter name"
+          />
+          <span class="preview"></span>
+        </div>
+      </div>
+    <script>
+      const usernameRef = document.querySelector("input.username");
+      usernameRef.addEventListener("keyup", function (e) {
+        e.preventDefault();
+        <!-- console.log(e.keyCode); -->
+        if (e.key === "Enter") {
+            const previewRef = document.querySelector(".preview");
+            previewRef.innerText = e.target.value;
+        }
+
+        if (e.key == "Shift") {
+            console.log("Shift pressed");
+        }
+
+        console.log(e.getModifierState('CapsLock'));
+      });
+    </script>
+  </body>
+</html>
