@@ -1,0 +1,14 @@
+{
+    "name": "Chirag Goel",
+    "address": {
+        "permanentAddress": {
+            "pincode": 262901
+        },
+        "currentAddress": {
+            "pincode": 560067
+        }
+    },
+    "teckStacks": ["JS", "React", "CSS"],
+    "kids": null,
+    "isEmployed": true
+}
