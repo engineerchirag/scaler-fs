@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Counter</title>
+        <style>
+            .counter-wrapper{ 
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .reset {
+                width: 80px;
+            }
+
+            .count {
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="counter-wrapper">
+            <div class="count">0</div>
+            <div class="buttons">
+                <button class="decrement">-</button>
+                <button class="increment">+</button>
+            </div>
+            <div class="change-value-section">
+                <span>
+                    Increment/Decrement by:
+                </span>
+                <input type="number" value="1"/>
+            </div>
+            <button class="reset">Reset</button>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

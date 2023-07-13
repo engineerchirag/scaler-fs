@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Star Rating</title>
+        <style>
+            #rating-section {
+                display: flex;
+            }
+            .rating-box {
+                width: 60px;
+                height: 60px;
+                font-size: 60px;
+            }
+            .empty-star::before {
+                content: '☆';
+            }  
+            .fulled-star::before {
+                content: '★';
+            } 
+            .smiley {
+                margin: 20px;
+                font-size: 80px;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="rating-section"></section>
+        <div class="smiley"></div>
+        <script src="./index.js"></script>
+    </body>
+</html>
