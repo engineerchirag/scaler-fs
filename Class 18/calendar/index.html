@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Calendar</title>
+        <style>
+            .container {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #ccc;
+                text-align: center;
+                padding: 5px;
+                gap: 10px;
+            }
+            .controls {
+                display: flex;
+                flex-grow: 1;
+                gap: 10px;
+            }
+
+            .controls .prev {
+                width: 30px;
+            }
+
+            .controls .next {
+                width: 30px;
+            }
+
+            .controls .month {
+                display: flex;
+                flex-grow: 1;
+            }
+
+            .controls .year {
+                display: flex;
+                flex-grow: 1;
+            }
+            .dates, .days {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 10px;
+            }
+            .dates span:nth-child(7n + 1){
+                color: red;
+            }
+
+            .today-section {
+                display: flex;
+                flex-grow: 1;
+            }
+            .today-section button {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="controls">
+                <button class="prev"><</button>
+                <select class="month"></select>
+                <select class="year"></select>
+                <button class="next">></button>
+            </div>
+            <div class="days">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thur</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            <div class="dates">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="date date-1" data-id="1">1</span>
+                <span class="date date-2" data-id="2">2</span>
+                <span class="date date-3" data-id="3">3</span>
+                <span class="date date-4" data-id="4">4</span>
+                <span class="date date-5" data-id="5">5</span>
+                <span class="date date-6" data-id="6">6</span>
+                <span class="date date-7" data-id="7">7</span>
+                <span class="date date-8" data-id="8">8</span>
+                <span class="date date-9" data-id="9">9</span>
+                <span class="date date-9" data-id="9">10</span>
+                <span class="date date-9" data-id="9">11</span>
+
+            </div>
+            <div class="today-section">
+                <button>Today</button>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
