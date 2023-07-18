@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="search" />
+    <script>
+        const inputRef = document.querySelector('input');
+        
+        function debounce(fn, delay) {
+            let timeoutRef;
+            return function() {
+                clearTimeout(timeoutRef);
+                timeoutRef = setTimeout(() => {
+                    fn();
+                }, delay);
+            }
+        }
+
+        var count = 0;
+        const delay = 5000;
+    
+        const fn = function() {
+            count++;
+            console.log(inputRef.value, count);
+        }
+        
+        const debounceFn = debounce(fn, delay);
+
+        inputRef.addEventListener('keyup', debounceFn);
+    </script>
+</body>
+</html>
