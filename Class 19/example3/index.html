@@ -13,7 +13,7 @@
         function debounce(fn, delay) {
             let timeoutRef;
             return function() {
-                clearTimeout(timeoutRef);
+                clearTimeout(timeoutRef)
                 timeoutRef = setTimeout(() => {
                     fn();
                 }, delay);
