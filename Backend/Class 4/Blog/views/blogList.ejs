@@ -1,0 +1,24 @@
+<!-- views/blog.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+</head>
+<body>
+  <h1>Welcome to My Blog</h1>
+  <ul>
+    <% blogs.forEach(function(blog) { %>
+        <li>
+          <h2>
+            <a href="/blogs/<%= blog.id %>">
+              <%= blog.title %>
+          </a>
+          </h2>
+          <p><%= blog.description %></p>
+        </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
