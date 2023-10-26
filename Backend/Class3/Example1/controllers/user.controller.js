@@ -1,40 +1,36 @@
 import fs from 'fs';
+import User from '../models/user.model.js';
 
-export const getUserDetail = (req, res) => {
+export const getUserDetail = async (req, res) => {
     const { userId } = req.params;
     try {
-        const usersData = fs.readFileSync('mock/user.mock.json');
-        const searchedUserData = JSON.parse(usersData)[userId];
-        res.status(200).send(searchedUserData);
+        const data = await User.findById(userId);
+        res.status(200).send(data);
     } catch(e) {
         res.status(500).send(e.message);
     }
     
 };
 
-export const createUserDetail = (req, res) => {
+export const createUserDetail = async (req, res) => {
     const userData = req.body;
-    const usersData = JSON.parse(fs.readFileSync('mock/user.mock.json'));
-    const newUserId = Math.random();
-    usersData[newUserId] = req.body;
-    fs.writeFileSync('mock/user.mock.json', JSON.stringify(usersData));
-    res.status(200).send({ ...userData, id: newUserId });
+    try {
+        const data = await User.create(userData);
+        res.status(200).send(data);
+    } catch(e) {
+        res.status(503).send(e);
+    }
 };
 
-
-export const updateUserDetail = (req, res) => {
+export const updateUserDetail = async (req, res) => {
     const { userId } = req.params;
     const userData = req.body;
-    const usersData = JSON.parse(fs.readFileSync('mock/user.mock.json'));
-    usersData[userId] = req.body;
-    fs.writeFileSync('mock/user.mock.json', JSON.stringify(usersData));
-    res.status(200).send({ ...userData, id: userId });
+    const data = await User.updateOne({ _id: userId } , {$set: userData });
+    res.status(200).send(data);
 };
 
-export const deleteUserDetail = (req, res) => {
+export const deleteUserDetail = async (req, res) => {
     const { userId } = req.params;
-    const usersData = JSON.parse(fs.readFileSync('mock/user.mock.json'));
-    delete usersData[userId];
-    fs.writeFileSync('mock/user.mock.json', JSON.stringify(usersData));
-    res.status(200).send("User deleted");
+    const data = await User.findByIdAndDelete(userId);
+    res.status(200).send(data);
 };

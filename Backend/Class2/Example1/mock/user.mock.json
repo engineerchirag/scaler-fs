@@ -1,0 +1,32 @@
+{
+  "12": {
+    "name": "Revathi",
+    "phone": "99999999",
+    "email": "revathi@gmail.com",
+    "password": "123456"
+  },
+  "13": {
+    "name": "Chaitanya",
+    "phone": "99999999",
+    "email": "chaitanya@gmail.com",
+    "password": "123456"
+  },
+  "0.37078464919966314": {
+    "name": "Mohammed",
+    "phone": "88888888",
+    "email": "md@gmail.com",
+    "password": "1234322"
+  },
+  "0.19578176911307144": {
+    "name": "Md2",
+    "phone": "999999999",
+    "email": "md2@gmail.com",
+    "password": "1234322"
+  },
+  "0.15966708497082038": {
+    "name": "Md3",
+    "phone": "999999999",
+    "email": "md3@gmail.com",
+    "password": "1234322"
+  }
+}
