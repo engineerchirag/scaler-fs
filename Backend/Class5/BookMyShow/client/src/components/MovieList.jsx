@@ -5,7 +5,7 @@ const MovieList = () => {
     const [movies, setMovies] = useState([]);
 
     const loadMovies = async() => {
-        const response = await fetch('http://localhost:5050/api/movie/list?type=ALL');
+        const response = await fetch('/api/movie/list?type=ALL');
         const movieList = await response.json();
         setMovies(movieList);
     }

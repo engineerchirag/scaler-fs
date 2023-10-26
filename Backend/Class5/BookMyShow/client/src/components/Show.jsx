@@ -7,7 +7,7 @@ const Show = () => {
     const { showId } = useParams();
 
     const getShowDetail = async () => {
-        const response = await fetch(`http://localhost:5050/api/show/${showId}`);
+        const response = await fetch(`/api/show/${showId}`);
         const detail = await response.json();
         setShowDetail(detail);
     }

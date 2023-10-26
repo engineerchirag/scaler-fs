@@ -9,7 +9,7 @@ const SignIn = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await fetch('http://localhost:5050/api/user/login', {
+            await fetch('/api/user/login', {
                 method: 'POST',
                 body: JSON.stringify({
                     email,

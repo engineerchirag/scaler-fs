@@ -8,7 +8,7 @@ const TheatreList = () => {
     const { movieId } = useParams();
 
     const loadTheatres = async() => {
-        const response = await fetch(`http://localhost:5050/api/show/list?movie=${movieId}&date=2023-10-24`);
+        const response = await fetch(`/api/show/list?movie=${movieId}&date=2023-10-24`);
         const theatreList = await response.json();
         setTheatres(theatreList);
     }
