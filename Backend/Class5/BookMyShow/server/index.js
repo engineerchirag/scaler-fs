@@ -27,8 +27,8 @@ app.use('/', express.static('public'));
 app.use('*', (req, res) => {
     res.status(400).send('Page not found!');
 });
-
-app.listen(process.env.port || 5050, async () => {
+const PORT = process.env.port || 80;
+app.listen(PORT, async () => {
     await connectToDatabase();
-    console.log(`Server is running on http://localhost:5050`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 })
